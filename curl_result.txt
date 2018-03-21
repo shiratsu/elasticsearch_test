@@ -1,0 +1,5 @@
+curl -XGET 'localhost:9200/shakespeare?pretty'
+
+curl -XHEAD 'localhost:9200/twitter?pretty'
+
+curl -XGET 'localhost:9200/library/_search?size=10&pretty=true&q=title:test'

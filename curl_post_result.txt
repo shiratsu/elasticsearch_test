@@ -1,0 +1,94 @@
+curl -XPUT 'localhost:9200/shakespeare?pretty' -H 'Content-Type: application/json' -d'
+{
+ "mappings": {
+  "doc": {
+   "properties": {
+    "speaker": {"type": "keyword"},
+    "play_name": {"type": "keyword"},
+    "line_id": {"type": "integer"},
+    "speech_number": {"type": "integer"}
+   }
+  }
+ }
+}
+'
+
+{"account_number":82,"balance":41412,"firstname":"Concetta","lastname":"Barnes","age":39,"gender":"F","address":"195 Bayview Place","employer":"Fitcore","email":"concettabarnes@fitcore.com","city":"Summerfield","state":"NC"}
+
+
+
+curl -XPUT 'localhost:9200/accounts?pretty' -H 'Content-Type: application/json' -d'
+{
+ "mappings": {
+  "doc": {
+   "properties": {
+    "account_number": {"type": "integer"},
+    "balance": {"type": "integer"},
+    "firstname": {"type": "keyword"},
+    "lastname": {"type": "keyword"},
+    "age": {"type": "integer"},
+    "gender": {"type": "keyword"},
+    "address": {"type": "keyword"},
+    "employer": {"type": "keyword"},
+    "email": {"type": "keyword"},
+    "city": {"type": "keyword"},
+    "state": {"type": "keyword"}
+   }
+  }
+ }
+}
+'
+
+curl -XPUT 'localhost:9200/logstash-2015.05.18?pretty' -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "log": {
+      "properties": {
+        "geo": {
+          "properties": {
+            "coordinates": {
+              "type": "geo_point"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+url -XPUT 'localhost:9200/logstash-2015.05.19?pretty' -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "log": {
+      "properties": {
+        "geo": {
+          "properties": {
+            "coordinates": {
+              "type": "geo_point"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+'
+
+url -XPUT 'localhost:9200/logstash-2015.05.20?pretty' -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "log": {
+      "properties": {
+        "geo": {
+          "properties": {
+            "coordinates": {
+              "type": "geo_point"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+'
